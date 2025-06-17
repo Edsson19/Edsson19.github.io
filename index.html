@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edsson Reyes Official Merch</title>
+
+  <style>
+    body { margin:0; background:#000; color:#fff; font-family:Arial, sans-serif; }
+    header { background:#111; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; position:fixed; top:0; width:100%; z-index:1000; }
+    header .logo { font-weight:bold; }
+    header nav a { color:#fff; margin:0 10px; text-decoration:none; cursor:pointer; }
+    .submenu { position:relative; display:inline-block; margin:0 10px; }
+    .submenu span { cursor:pointer; }
+    .submenu span::after { content:"▶"; margin-left:5px; transition:transform .3s ease; }
+    .submenu.open span::after { transform:rotate(90deg); }
+    .submenu-content { display:none; position:relative; background:#003366; flex-direction:column; margin-top:5px; border-radius:4px; }
+    .submenu-content a { color:#fff; padding:8px 12px; text-decoration:none; display:block; border-bottom:1px solid #0055aa; }
+    .submenu-content a:last-child { border-bottom:none; }
+    .submenu.open .submenu-content { display:flex; }
+    .section { display:none; padding:120px 20px 40px; box-sizing:border-box; }
+    #inicio { display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; text-align:center; position:relative; }
+    #inicio .aura { position:absolute; top:50%; left:50%; width:350px; height:350px; background:radial-gradient(circle, rgba(0,123,255,.7), transparent 70%); transform:translate(-50%,-50%); filter:blur(60px); border-radius:50%; }
+    #inicio h1 { position:relative; z-index:2; font-size:6em; margin:0; text-shadow:0 0 8px #87CEFA, 0 0 16px #87CEFA; }
+    #inicio footer { position:absolute; bottom:20px; width:100%; text-align:center; color:gray; }
+    .productos { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:20px; max-width:1000px; margin:auto; }
+    .producto { background:#fff; color:#000; padding:10px; border-radius:8px; text-align:center; }
+    .producto img { width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:8px; }
+    #informacion .contenido { max-width:800px; margin:auto; text-align:center; font-size:1.4em; line-height:1.6em; }
+    .redes { display:flex; justify-content:center; gap:30px; margin-top:20px; }
+    .redes img { width:64px; height:64px; }
+
+    /* Estilos para ESBAC */
+    #esbac .contenido {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.6em;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 70vh;
+      padding-top: 20px;
+    }
+    #esbac .contenido h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.4em;
+      text-shadow:
+        0 0 8px #3399ff88,
+        0 0 20px #33bbffaa,
+        0 0 30px #00bbffcc;
+    }
+    #esbac .contenido .alumno {
+      font-size: 1.6em;
+      margin-bottom: 25px;
+      font-style: italic;
+      color: #ddd;
+      text-shadow:
+        0 0 6px #66aaffbb;
+    }
+    #esbac .contenido .materia {
+      font-size: 2em;
+      font-weight: 600;
+      color: #99ddff;
+      text-shadow:
+        0 0 8px #66caffcc,
+        0 0 18px #33bbffcc,
+        0 0 25px #00aaffdd;
+      margin-bottom: auto;
+    }
+    #esbac .contenido .gracias {
+      font-size: 3.5em;
+      color: #00bfff;
+      font-weight: bold;
+      margin-top: 40px;
+      text-shadow:
+        0 0 12px #00bfffcc,
+        0 0 20px #00aaffcc,
+        0 0 30px #0088ffcc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EdssonReyes Official Merch</div>
+  <nav>
+    <a onclick="mostrar('inicio')">Inicio</a>
+    <a onclick="mostrar('productos')">Productos</a>
+    <a onclick="mostrar('informacion')">Información</a>
+    <a onclick="mostrar('contacto')">Contacto</a>
+    <div class="submenu" id="submenu">
+      <span onclick="toggleSubmenu()">Más</span>
+      <div class="submenu-content" id="submenu-content">
+        <a onclick="mostrar('compartir')">Compartir</a>
+        <a onclick="mostrar('noticias')">Noticias</a>
+        <a onclick="mostrar('soporte')">Soporte</a>
+        <a onclick="mostrar('esbac')">ESBAC</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section id="inicio" class="section">
+  <div class="aura"></div>
+  <h1>Edsson Reyes</h1>
+  <footer>edssonfindme@gmail.com</footer>
+</section>
+
+<section id="productos" class="section">
+  <h2>Productos</h2>
+  <div class="productos">
+
+    <!-- Productos con imágenes -->
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/SS2.png" alt="Producto 1">
+      <div>Sudadera ER</div>
+    </div>
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/exe.png" alt="Producto 2">
+      <div>Pants ER</div>
+    </div>
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/SS2.png" alt="Producto 3">
+      <div>Playera Azul</div>
+    </div>
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/exe.png" alt="Producto 4">
+      <div>Playera Blanca</div>
+    </div>
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/SS2.png" alt="Producto 5">
+      <div>Pants Light</div>
+    </div>
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/exe.png" alt="Producto 6">
+      <div>Pants Dark</div>
+    </div>
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/SS2.png" alt="Producto 7">
+      <div>ER Cap</div>
+    </div>
+    <div class="producto">
+      <img src="C:/Users/monti/Pictures/Saved Pictures/exe.png" alt="Producto 8">
+      <div>ER Socks</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="informacion" class="section">
+  <div class="contenido">
+    <h1>¿Qué es EdssonReyes Official Merch?</h1>
+    <p>EdssonReyes Official Merch es una plataforma diseñada para ofrecer artículos de edición limitada y productos personalizados relacionados con la identidad artística de Edsson Reyes.</p>
+    <h2>¿Por qué comprar en EdssonReyes Official Merch?</h2>
+    <ul>
+      <li>Exclusividad – Productos únicos diseñados para representar la visión de Edsson Reyes.</li>
+      <li>Calidad – Materiales premium y gráficos originales.</li>
+      <li>Apoyo directo al artista – Cada compra impulsa su carrera musical.</li>
+      <li>Envíos a múltiples regiones – Nacionales e internacionales.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contacto" class="section">
+  <div class="contenido">
+    <h1>Contacto</h1>
+    <div class="redes">
+      <a href="https://www.instagram.com/soy_edsson" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+      </a>
+      <a href="https://www.threads.com/@soy_edsson" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Threads">
+      </a>
+      <a href="https://www.facebook.com/edsson.reyes.56" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="compartir" class="section">
+  <div class="contenido">
+    <h1>Compartir</h1>
+    <p>Comparte esta página en tus redes sociales para apoyar a Edsson Reyes.</p>
+  </div>
+</section>
+
+<section id="noticias" class="section">
+  <div class="contenido">
+    <h1>Noticias</h1>
+    <p>Mantente al tanto de las noticias de Edsson Reyes en su viaje por el mundo.</p>
+  </div>
+</section>
+
+<section id="soporte" class="section">
+  <div class="contenido">
+    <h1>Soporte</h1>
+    <p>edssonfindme@gmail.com</p>
+    <form onsubmit="enviarSoporte(event)">
+      <input type="email" id="email" placeholder="Tu correo electrónico" required>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<section id="esbac" class="section">
+  <div class="contenido">
+    <h1>
+      Escuela Secundaria y de<br>
+      Bachilleres Dr. Alejandro Cerisola
+    </h1>
+    <div class="alumno">Alumno: Edsson Einar Montijo Reyes (creador)</div>
+    <div class="materia">Materia: TICs</div>
+    <div class="gracias">Gracias TICs!!!</div>
+  </div>
+</section>
+
+<script>
+  function mostrar(id) {
+    document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+    const sec = document.getElementById(id);
+    sec.style.display = id === 'inicio' ? 'flex' : 'block';
+    document.getElementById('submenu').classList.remove('open');
+    window.scrollTo(0, 0);
+  }
+  function toggleSubmenu() {
+    document.getElementById('submenu').classList.toggle('open');
+  }
+  window.onload = () => mostrar('inicio');
+  function enviarSoporte(e) {
+    e.preventDefault();
+    alert('Mensaje enviado');
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>
